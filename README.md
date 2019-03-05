@@ -1,22 +1,29 @@
-# Desafio 2
+A aplicação permite que você se cadastre como cliente ou barbeiro. Como cliente, é possível marcar horários com os barbeiros cadstrados. Como barbeiro, você pode verificar os agendamentos do dia.
 
-Nesse segundo desafio você deve melhorar a aplicação que criamos até agora, o GoBarber.
+Foi utilizado: Docker com PostgreSQL, NodeJS, Nunjucks e estruturada no padrão MVC. 
 
-Até agora criamos a parte do usuário poder agendar um serviço com o prestador, e também vetamos que serviços sejam marcados no mesmo horário, ou em horários que já passaram.
+Para utilizar é preciso utilizar: 
+```
+ docker run --name gonodemodulo2 -e POSTGRES_PASSWORD=docker -d postgres.
+ ```
+ Iniciar o container do Docker com docker start gonodemodulo2.
 
-A partir de agora você deve implementar o seguinte:
+Após isso, instalar as dependencias com:
+```
+npm install
+```
 
-Crie uma seção para o prestador de serviços acompanhar os agendamentos do dia programados com ele. Essa seção deve incluir as informações do usuário que agendou e também o horário do agendamento.
 
-## Entrega
+Executar as migrations: 
+```
+npx sequelize migration:create --name=create-users ```
+```npx sequelize migration:create --name=create-appointments
+ ```
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do código do desafio feito por mim aqui: https://github.com/Rocketseat/bootcamp-nodejs-desafio-02
+Executar com 
 
-*PS.: Tente fazer o desafio sem olhar o código antes :)*
+```
+npm start
+```
 
-*PS2.: Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras :D*
-
-Booooooora dev!!!
-
-“Não espere para plantar, apenas tenha paciência para colher”!
 
