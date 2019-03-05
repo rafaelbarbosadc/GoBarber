@@ -16,9 +16,13 @@ npm install
 
 Executar as migrations: 
 ```
-npx sequelize migration:create --name=create-users ```
-```npx sequelize migration:create --name=create-appointments
- ```
+npx sequelize migration:create --name=create-users 
+
+```
+
+```
+npx sequelize migration:create --name=create-appointments
+```
 
 Executar com 
 
